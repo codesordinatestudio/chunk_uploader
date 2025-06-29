@@ -1,0 +1,8 @@
+node_modules
+dist
+examples
+.env
+.npmrc
+.vscode
+.idea
+tsup.config.ts
