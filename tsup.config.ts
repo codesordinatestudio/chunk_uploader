@@ -6,7 +6,7 @@ export default defineConfig({
   dts: true,
   clean: true,
   sourcemap: true,
-  external: ["@octokit/oauth-app", "@octokit/rest", "googleapis", "jsonwebtoken"],
+  external: ["ioredis", "bullmq"],
   treeshake: true,
   splitting: false,
   minify: true,

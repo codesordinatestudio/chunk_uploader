@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesordinatestudio/social-auth.git"
+    "url": "git+https://github.com/codesordinatestudio/chunk_uploader"
   },
   "scripts": {
     "build": "tsup",
