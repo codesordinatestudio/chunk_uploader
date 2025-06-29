@@ -42,16 +42,16 @@ export class UploadPhoto {
       }
     );
 
-    worker.on("completed", (job) => {
-      console.log(`Job ${job.id} completed successfully`);
-    });
+    /*   worker.on("completed", (job) => {
+      this.config.logger?.info(`Job ${job.id} completed successfully`);
+    }); */
 
     worker.on("failed", (job: Job | undefined, err: Error) => {
-      console.error(`Job ${job?.id} failed with error: ${err.message}`);
+      this.config.logger?.error(`Job ${job?.id} failed with error: ${err.message}`);
     });
 
     worker.on("ready", () => {
-      console.log("Upload Worker is ready to process jobs");
+      this.config.logger?.info("Upload Worker is ready to process jobs");
     });
   }
 
