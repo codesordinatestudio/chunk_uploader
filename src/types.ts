@@ -13,7 +13,7 @@ export type UploadPhotoQueuePayload = {
 };
 
 export type UploaderConfig = {
-  logger?: Boolean; // Logger instance for logging messages
+  logger?: { info: (message: string) => void; error: (message: string) => void }; // Logger instance for logging messages,
   redis: {
     host: string;
     port: number;

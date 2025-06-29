@@ -27,11 +27,10 @@ export class UploadPhoto {
         this.config.s3Client
           ?.write(job.data.filePath, buffer)
           .then((res) => {
-            this.config.logger &&
-              console.log(`P H O T O - U P L O A D E D - S U C C E S S F U L L Y : ${job.data.filePath}`);
+            this.config.logger?.info(`P H O T O - U P L O A D E D - S U C C E S S F U L L Y : ${job.data.filePath}`);
           })
           .catch((err) => {
-            this.config.logger && console.error(`Failed to upload photo: ${err.message}`);
+            this.config.logger?.error(`Failed to upload photo: ${err.message}`);
           });
       },
       {
